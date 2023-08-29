@@ -12,4 +12,8 @@ struct Belmonts: Identifiable {
     var name: String
     var description: String
     var image: URL?
+    var strength: Int
+    var weakness: String
 }
+
+
