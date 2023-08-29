@@ -10,7 +10,7 @@ import SwiftUI
 struct BelmontListView: View {
     @ObservedObject var viewModel: BelmontListViewModel
     
-    var body: some View {
+    var body: some View {  
         List(viewModel.belmonts) { belmont in
             Text(belmont.name)
         }
