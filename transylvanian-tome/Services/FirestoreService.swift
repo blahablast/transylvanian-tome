@@ -12,35 +12,59 @@ class FirestoreService {
     
     private init() {}
     
-    func addBelmontToFirestore(name: String, description: String, image: String, strength: Int, weakness: String) {
+    
+    
+    // MARK: - LOADING MONSTERS TO FIRESTORE
+    
+    // this function fetches the monsters from a the local json file. Does NOT add them to firestore.
+    func loadMonsters() -> [Monster] {
+        if let url = Bundle.main.url(forResource: "monsters", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData = try decoder.decode([Monster].self, from: data)
+                return jsonData
+            } catch {
+                print("Error decoding JSON: \(error)")
+            }
+        }
+        return []
+    }
+    
+    func addMonstersToFirestore(monsters: [Monster]) {
+        for monster in monsters {
+            addMonsterToFirestore(monster: monster)
+        }
+    }
+    
+    func addMonsterToFirestore(monster: Monster) {
         let db = Firestore.firestore()
         
-        // Check if a Belmont with the same name already exists
-        db.collection("belmonts").whereField("name", isEqualTo: name).getDocuments { (snapshot, error) in
+        // Check if a Monster with the same name already exists
+        db.collection("monsters").whereField("name", isEqualTo: monster.name).getDocuments { (snapshot, error) in
             if let error = error {
-                print("Error checking Belmont: \(error)")
+                print("Error checking Monster: \(error)")
                 return
             }
             
             if let snapshot = snapshot, snapshot.documents.isEmpty {
-                // No Belmont with the same name found, so add the new Belmont
+                // No Monster with the same name found, so add the new Monster
                 var ref: DocumentReference? = nil
-                ref = db.collection("belmonts").addDocument(data: [
-                    "name": name,
-                    "description": description,
-                    "image": image,
-                    "strength": strength,
-                    "weakness": weakness
+                ref = db.collection("monsters").addDocument(data: [
+                    "id": monster.id?.uuidString ?? UUID().uuidString,
+                    "name": monster.name,
+                    "description": monster.description,
+                    // Add other monster properties here
                 ]) { err in
                     if let err = err {
-                        print("Error adding Belmont: \(err)")
+                        print("Error adding Monster: \(err)")
                     } else {
-                        print("Belmont added with ID: \(ref!.documentID)")
+                        print("Monster added with ID: \(ref!.documentID)")
                     }
                 }
             } else {
-                // A Belmont with the same name exists, so skip
-                print("Belmont with the name \(name) already exists!")
+                // A Monster with the same name exists, so skip
+                print("Monster with the name \(monster.name) already exists!")
             }
         }
     }

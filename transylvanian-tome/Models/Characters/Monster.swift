@@ -1,5 +1,5 @@
 //
-//  Belmonts.swift
+//  Monsters.swift
 //  transylvanian-tome
 //
 //  Created by sam blaha on 8/28/23.
@@ -7,13 +7,11 @@
 
 import Foundation
 
-struct Belmonts: Identifiable {
-    var id: String
+struct Monster: Identifiable, Decodable {
+    var id: UUID?
     var name: String
     var description: String
-    var image: URL?
+    var image: String
     var strength: Int
     var weakness: String
 }
-
-

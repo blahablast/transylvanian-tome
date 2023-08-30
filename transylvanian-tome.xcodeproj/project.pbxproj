@@ -16,11 +16,10 @@
 		53A9DF9A2A9E2F410047602C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 53A9DF992A9E2F410047602C /* FirebaseFirestore */; };
 		53A9DF9C2A9E2F410047602C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53A9DF9B2A9E2F410047602C /* FirebaseFirestoreSwift */; };
 		53A9DF9E2A9E5F360047602C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DF9D2A9E5F360047602C /* FirestoreService.swift */; };
-		53A9DFA02A9E70850047602C /* TempAddBelmont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DF9F2A9E70850047602C /* TempAddBelmont.swift */; };
-		53D257B02A9D7F5D009B3990 /* Belmonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257AF2A9D7F5D009B3990 /* Belmonts.swift */; };
-		53D257B22A9D7F68009B3990 /* Monsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257B12A9D7F68009B3990 /* Monsters.swift */; };
-		53D257B42A9D8219009B3990 /* BelmontListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257B32A9D8219009B3990 /* BelmontListViewModel.swift */; };
-		53D257B62A9D85DA009B3990 /* BelmontListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257B52A9D85DA009B3990 /* BelmontListView.swift */; };
+		53A9DFA22A9F99C10047602C /* monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = 53A9DFA12A9F99C10047602C /* monsters.json */; };
+		53A9DFA42A9FA5C10047602C /* MonsterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */; };
+		53A9DFA62A9FA87A0047602C /* TempAddMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */; };
+		53D257B22A9D7F68009B3990 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257B12A9D7F68009B3990 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +30,10 @@
 		538A84E22A9D08CC0095F5A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53A9DF942A9E2ECC0047602C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53A9DF9D2A9E5F360047602C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		53A9DF9F2A9E70850047602C /* TempAddBelmont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAddBelmont.swift; sourceTree = "<group>"; };
-		53D257AF2A9D7F5D009B3990 /* Belmonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Belmonts.swift; sourceTree = "<group>"; };
-		53D257B12A9D7F68009B3990 /* Monsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monsters.swift; sourceTree = "<group>"; };
-		53D257B32A9D8219009B3990 /* BelmontListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelmontListViewModel.swift; sourceTree = "<group>"; };
-		53D257B52A9D85DA009B3990 /* BelmontListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BelmontListView.swift; sourceTree = "<group>"; };
+		53A9DFA12A9F99C10047602C /* monsters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = monsters.json; sourceTree = "<group>"; };
+		53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterListViewModel.swift; sourceTree = "<group>"; };
+		53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAddMonsters.swift; sourceTree = "<group>"; };
+		53D257B12A9D7F68009B3990 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +73,7 @@
 				53D257A42A9D78B8009B3990 /* Views */,
 				53D257A72A9D7C7B009B3990 /* ViewModels */,
 				53D257A82A9D7C95009B3990 /* Services */,
+				53A9DFA72A9FB11F0047602C /* Data */,
 				53D257A92A9D7C9D009B3990 /* Helpers */,
 				53A9DF942A9E2ECC0047602C /* GoogleService-Info.plist */,
 				538A84DB2A9D08CC0095F5A7 /* transylvanian_tomeApp.swift */,
@@ -92,6 +91,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		53A9DFA72A9FB11F0047602C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				53A9DFA12A9F99C10047602C /* monsters.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		53D257A32A9D78AF009B3990 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				538A84DD2A9D08CC0095F5A7 /* HomeView.swift */,
-				53D257B52A9D85DA009B3990 /* BelmontListView.swift */,
-				53A9DF9F2A9E70850047602C /* TempAddBelmont.swift */,
+				53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,7 +119,7 @@
 		53D257A72A9D7C7B009B3990 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				53D257B32A9D8219009B3990 /* BelmontListViewModel.swift */,
+				53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -136,8 +142,7 @@
 		53D257AA2A9D7EC9009B3990 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
-				53D257AF2A9D7F5D009B3990 /* Belmonts.swift */,
-				53D257B12A9D7F68009B3990 /* Monsters.swift */,
+				53D257B12A9D7F68009B3990 /* Monster.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A9DFA22A9F99C10047602C /* monsters.json in Resources */,
 				538A84E32A9D08CC0095F5A7 /* Preview Assets.xcassets in Resources */,
 				538A84E02A9D08CC0095F5A7 /* Assets.xcassets in Resources */,
 				53A9DF952A9E2ECC0047602C /* GoogleService-Info.plist in Resources */,
@@ -222,13 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				53A9DF9E2A9E5F360047602C /* FirestoreService.swift in Sources */,
-				53D257B22A9D7F68009B3990 /* Monsters.swift in Sources */,
-				53D257B02A9D7F5D009B3990 /* Belmonts.swift in Sources */,
+				53D257B22A9D7F68009B3990 /* Monster.swift in Sources */,
 				538A84DE2A9D08CC0095F5A7 /* HomeView.swift in Sources */,
+				53A9DFA42A9FA5C10047602C /* MonsterListViewModel.swift in Sources */,
 				538A84DC2A9D08CC0095F5A7 /* transylvanian_tomeApp.swift in Sources */,
-				53D257B62A9D85DA009B3990 /* BelmontListView.swift in Sources */,
-				53D257B42A9D8219009B3990 /* BelmontListViewModel.swift in Sources */,
-				53A9DFA02A9E70850047602C /* TempAddBelmont.swift in Sources */,
+				53A9DFA62A9FA87A0047602C /* TempAddMonsters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
