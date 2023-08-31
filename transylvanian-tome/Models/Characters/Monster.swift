@@ -12,6 +12,5 @@ struct Monster: Identifiable, Decodable {
     var name: String
     var description: String
     var image: String
-    var strength: Int
-    var weakness: String
+    var location: String
 }

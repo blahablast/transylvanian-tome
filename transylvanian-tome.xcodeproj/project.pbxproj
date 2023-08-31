@@ -16,9 +16,11 @@
 		53A9DF9A2A9E2F410047602C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 53A9DF992A9E2F410047602C /* FirebaseFirestore */; };
 		53A9DF9C2A9E2F410047602C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 53A9DF9B2A9E2F410047602C /* FirebaseFirestoreSwift */; };
 		53A9DF9E2A9E5F360047602C /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DF9D2A9E5F360047602C /* FirestoreService.swift */; };
-		53A9DFA22A9F99C10047602C /* monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = 53A9DFA12A9F99C10047602C /* monsters.json */; };
+		53A9DFA22A9F99C10047602C /* CV1Monsters.json in Resources */ = {isa = PBXBuildFile; fileRef = 53A9DFA12A9F99C10047602C /* CV1Monsters.json */; };
 		53A9DFA42A9FA5C10047602C /* MonsterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */; };
 		53A9DFA62A9FA87A0047602C /* TempAddMonsters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */; };
+		53A9DFAB2AA0CC340047602C /* MonsterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFAA2AA0CC340047602C /* MonsterListView.swift */; };
+		53A9DFAE2AA0CD100047602C /* MonsterListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A9DFAD2AA0CD100047602C /* MonsterListCell.swift */; };
 		53D257B22A9D7F68009B3990 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D257B12A9D7F68009B3990 /* Monster.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,9 +32,11 @@
 		538A84E22A9D08CC0095F5A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		53A9DF942A9E2ECC0047602C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		53A9DF9D2A9E5F360047602C /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
-		53A9DFA12A9F99C10047602C /* monsters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = monsters.json; sourceTree = "<group>"; };
+		53A9DFA12A9F99C10047602C /* CV1Monsters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CV1Monsters.json; sourceTree = "<group>"; };
 		53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterListViewModel.swift; sourceTree = "<group>"; };
 		53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempAddMonsters.swift; sourceTree = "<group>"; };
+		53A9DFAA2AA0CC340047602C /* MonsterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterListView.swift; sourceTree = "<group>"; };
+		53A9DFAD2AA0CD100047602C /* MonsterListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterListCell.swift; sourceTree = "<group>"; };
 		53D257B12A9D7F68009B3990 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +98,33 @@
 		53A9DFA72A9FB11F0047602C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				53A9DFA12A9F99C10047602C /* monsters.json */,
+				53A9DFA12A9F99C10047602C /* CV1Monsters.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		53A9DFA82AA0C49E0047602C /* CV1ListView */ = {
+			isa = PBXGroup;
+			children = (
+				53A9DFAA2AA0CC340047602C /* MonsterListView.swift */,
+			);
+			path = CV1ListView;
+			sourceTree = "<group>";
+		};
+		53A9DFA92AA0C5370047602C /* CV1ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */,
+			);
+			path = CV1ViewModels;
+			sourceTree = "<group>";
+		};
+		53A9DFAC2AA0CCE20047602C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				53A9DFAD2AA0CD100047602C /* MonsterListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		53D257A32A9D78AF009B3990 /* Models */ = {
@@ -110,8 +138,10 @@
 		53D257A42A9D78B8009B3990 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53A9DFA82AA0C49E0047602C /* CV1ListView */,
 				538A84DD2A9D08CC0095F5A7 /* HomeView.swift */,
 				53A9DFA52A9FA87A0047602C /* TempAddMonsters.swift */,
+				53A9DFAC2AA0CCE20047602C /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,7 +149,7 @@
 		53D257A72A9D7C7B009B3990 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				53A9DFA32A9FA5C10047602C /* MonsterListViewModel.swift */,
+				53A9DFA92AA0C5370047602C /* CV1ViewModels */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -213,7 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53A9DFA22A9F99C10047602C /* monsters.json in Resources */,
+				53A9DFA22A9F99C10047602C /* CV1Monsters.json in Resources */,
 				538A84E32A9D08CC0095F5A7 /* Preview Assets.xcassets in Resources */,
 				538A84E02A9D08CC0095F5A7 /* Assets.xcassets in Resources */,
 				53A9DF952A9E2ECC0047602C /* GoogleService-Info.plist in Resources */,
@@ -231,6 +261,8 @@
 				53D257B22A9D7F68009B3990 /* Monster.swift in Sources */,
 				538A84DE2A9D08CC0095F5A7 /* HomeView.swift in Sources */,
 				53A9DFA42A9FA5C10047602C /* MonsterListViewModel.swift in Sources */,
+				53A9DFAE2AA0CD100047602C /* MonsterListCell.swift in Sources */,
+				53A9DFAB2AA0CC340047602C /* MonsterListView.swift in Sources */,
 				538A84DC2A9D08CC0095F5A7 /* transylvanian_tomeApp.swift in Sources */,
 				53A9DFA62A9FA87A0047602C /* TempAddMonsters.swift in Sources */,
 			);

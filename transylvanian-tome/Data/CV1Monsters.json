@@ -1,0 +1,99 @@
+[
+    {
+        "name": "Zombie",
+        "description": "Slow-moving undead that rise from the ground.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/a/a3/Zombie1.gif/revision/latest?cb=20170815044139",
+        "location": "Stage 1"
+    },
+    {
+        "name": "Panther",
+        "description": "Fast-moving beast that runs forward.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/9/9b/Vkill-leopard.gif/revision/latest?cb=20170815050253",
+        "location": "Stage 1"
+    },
+    {
+        "name": "Bat",
+        "description": "Flies in a straight line.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/d/d1/Bat_Icon.png/revision/latest?cb=20150327232856",
+        "location": "Multiple Stages"
+    },
+    {
+        "name": "Medusa Head",
+        "description": "Floats in a sine wave pattern.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/a/ac/MHead.gif/revision/latest?cb=20170815044050",
+        "location": "Multiple Stages"
+    },
+    {
+        "name": "Merman",
+        "description": "Jumps out of water and spits fire.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/c/c2/Fishman_cv1.gif/revision/latest?cb=20170815044047",
+        "location": "Stage 2"
+    },
+    {
+        "name": "Knight",
+        "description": "Walks slowly back and forth.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/4/4e/Cv3-knight.gif/revision/latest?cb=20180720083512",
+        "location": "Stage 2"
+    },
+    {
+        "name": "Skeleton",
+        "description": "Walks quickly, jumps & throws bones in an arc.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/0/07/Skeleton_cv1.gif/revision/latest?cb=20170815044137",
+        "location": "Stage 3"
+    },
+    {
+        "name": "Raven",
+        "description": "Flies in a straight line towards the player.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/5/5c/C64cv1-raven.gif/revision/latest?cb=20170815043835",
+        "location": "Stage 6"
+    },
+    {
+        "name": "Bone Pillar",
+        "description": "Stationary enemy that shoots fireballs.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/9/95/Pillarofb.gif/revision/latest?cb=20170815044101",
+        "location": "Stage 3 and 5"
+    },
+    {
+        "name": "Ghost",
+        "description": "Appears out of nowhere and follows the player.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/1/14/Ghost_cv1.gif/revision/latest?cb=20170815044048",
+        "location": "Stage 3"
+    },
+    {
+        "name": "Hunchback",
+        "description": "Jumps around and follows the player.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/c/cb/C64cv1-hunch.gif/revision/latest?cb=20170815043752",
+        "location": "Stage 4"
+    },
+    {
+        "name": "Axe Knight",
+        "description": "Walks around and throws axes across screen horizontally.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/5/5d/Axeknigh-1-.gif/revision/latest?cb=20170815043621",
+        "location": "Stage 5"
+    },
+    {
+        "name": "Blood Skeleton",
+        "description": "Reanimates shortly after being defeated.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/a/aa/Cv3-redskele.gif/revision/latest?cb=20180720084304",
+        "location": "Stage 6"
+    },
+    {
+        "name": "Eagle",
+        "description": "Flies across screen, dropping hunchbacks.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/2/27/C64cv1-eagle.gif/revision/latest?cb=20170815043626",
+        "location": "Stage 4"
+    },
+    {
+        "name": "White Dragon",
+        "description": "Clinges to castle structure, hurling fireballs towards Simon.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/e/e6/C64cv1-skeledragon.gif/revision/latest/scale-to-width-down/1000?cb=20191018184956",
+        "location": "Stage 4"
+    },
+    {
+        "name": "Vampire Bat (1st Stage Boss)",
+        "description": "Flies irregularly, hurling fireballs and attempting to knock Simon off his ledge.",
+        "image": "https://static.wikia.nocookie.net/castlevania/images/7/73/C64cv1-vbat.gif/revision/latest?cb=20170815043838",
+        "location": "Stage 4"
+    }
+]
+
