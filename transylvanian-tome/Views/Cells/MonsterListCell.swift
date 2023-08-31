@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MonsterListCell: View {
     var monster: Monster
-    
+
     var body: some View {
-        HStack {
+        HStack(alignment: .center) {
             // Display the image from the URL
             if let imageUrl = URL(string: monster.image) {
                 AsyncImage(url: imageUrl) { phase in
@@ -20,22 +20,22 @@ struct MonsterListCell: View {
                         image
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 60, height: 60)  // Adjust this to your preferred size
-                            .clipShape(Circle())           // Makes it round, remove if not wanted
-                            .overlay(Circle().stroke(Color.gray, lineWidth: 2)) // Optional white border
-                            .shadow(radius: 3)              // Optional shadow
+                            .frame(width: 60, height: 60)
+                            .clipShape(Circle())
+                            .overlay(Circle().stroke(Color.gray, lineWidth: 2))
+                            .shadow(radius: 3)
                     case .failure:
-                        Image(systemName: "photo") // Placeholder for failed image
+                        Image(systemName: "photo")
                             .frame(width: 50, height: 50)
                             .background(Color.gray)
                             .clipShape(Circle())
                     case .empty:
-                        Image(systemName: "photo.fill") // Placeholder for empty state
+                        Image(systemName: "photo.fill")
                             .frame(width: 50, height: 50)
                             .background(Color.gray)
                             .clipShape(Circle())
                     @unknown default:
-                        Image(systemName: "photo.fill") // Placeholder for any other unknown state
+                        Image(systemName: "photo.fill")
                             .frame(width: 50, height: 50)
                             .background(Color.gray)
                             .clipShape(Circle())
@@ -45,13 +45,22 @@ struct MonsterListCell: View {
             }
             
             // Display the name and description
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text(monster.name)
                     .font(.headline)
+                    .truncationMode(.tail)
+                    .lineLimit(1)
+                    .foregroundColor(Color.white)
                 Text(monster.description)
                     .font(.subheadline)
+                    .truncationMode(.tail)
+                    .lineLimit(2)
+                    .foregroundColor(Color.white)
             }
         }
+        .padding(.vertical)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.clear)
     }
 }
 
