@@ -41,7 +41,7 @@ struct MonsterListCell: View {
                             .clipShape(Circle())
                     }
                 }
-                .padding(.trailing, 10)
+                .padding()
             }
             
             // Display the name and description
@@ -60,7 +60,9 @@ struct MonsterListCell: View {
         }
         .padding(.vertical)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.clear)
+        .background(Color.black.opacity(0.4))
+        .border(Color.gray, width: 2)
+        .cornerRadius(5)
     }
 }
 

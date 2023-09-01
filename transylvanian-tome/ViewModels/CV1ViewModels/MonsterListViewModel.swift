@@ -11,6 +11,9 @@ import FirebaseFirestoreSwift
 
 class MonsterListViewModel: ObservableObject {
     @Published var monsters: [Monster] = []
+    @Published var selectedMonster: Monster? = nil
+    @Published var isShowingDetail = false
+  
     
     func loadAndPopulateFirestore() {
         self.monsters = FirestoreService.shared.loadMonsters()

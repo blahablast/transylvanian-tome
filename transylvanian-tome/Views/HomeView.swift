@@ -9,17 +9,17 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: MonsterListView()) {
+                    Text("View Monsters")
+                }
+            }
         }
-        .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
