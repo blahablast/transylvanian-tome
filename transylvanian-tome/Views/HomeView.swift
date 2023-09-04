@@ -9,13 +9,18 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                NavigationLink(destination: MonsterListView()) {
-                    Text("View Monsters")
+                NavigationLink(destination: CV1HomeView()) {
+                    Text("Castlevania")
+                        .font(Font.custom("FetteUnzfraktur", size: 30))
                 }
             }
+            .navigationTitle("Transylvanian Tome")
+            
         }
+        
+        
     }
 }
 

@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Monster: Identifiable, Decodable {
+struct GameItem: Identifiable, Decodable {
     var id: UUID?
     var name: String
     var description: String
     var image: String
-    var location: String
+    var location: String?
+    var itemUsage: String?
 }

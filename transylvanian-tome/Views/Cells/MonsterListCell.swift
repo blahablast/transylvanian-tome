@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MonsterListCell: View {
-    var monster: Monster
+    var monster: GameItem
 
     var body: some View {
         HStack(alignment: .center) {
@@ -47,12 +47,12 @@ struct MonsterListCell: View {
             // Display the name and description
             VStack(alignment: .leading, spacing: 2) {
                 Text(monster.name)
-                    .font(.headline)
+                    .font(.title2)
                     .truncationMode(.tail)
                     .lineLimit(1)
                     .foregroundColor(Color.white)
-                Text(monster.description)
-                    .font(.subheadline)
+                Text(monster.description ?? "")
+                    .font(.body)
                     .truncationMode(.tail)
                     .lineLimit(2)
                     .foregroundColor(Color.white)
@@ -71,7 +71,7 @@ struct MonsterListCell: View {
 struct MonsterListCell_Previews: PreviewProvider {
     static var previews: some View {
         // Create a sample monster
-        let sampleMonster = Monster(id: UUID(), name: "Dracula", description: "The main antagonist", image: "https://static.wikia.nocookie.net/castlevania/images/5/51/DracSymph.jpg/revision/latest/scale-to-width-down/1000?cb=20200703143712", location: "Various")
+        let sampleMonster = GameItem(id: UUID(), name: "Dracula", description: "The main antagonist", image: "https://static.wikia.nocookie.net/castlevania/images/5/51/DracSymph.jpg/revision/latest/scale-to-width-down/1000?cb=20200703143712", location: "Various")
 
         // Use the sample monster for the preview
         MonsterListCell(monster: sampleMonster)

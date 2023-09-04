@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CV1MonsterDetailView: View {
-    let monster: Monster
-    @Binding var selectedMonster: Monster?  // This binding now points to the optional Monster
+    let monster: GameItem
+    @Binding var selectedMonster: GameItem?  // This binding now points to the optional Monster
     
     var body: some View {
         ZStack {
@@ -53,7 +53,8 @@ struct CV1MonsterDetailView: View {
                 
                 VStack {
                     Text(monster.name)
-                        .font(.title)
+//                        .font(.title)
+                        .font(Font.custom("FetteUnzfraktur", size: 30))
                         .fontWeight(.light)
                         .padding(.bottom, 20)
                     
@@ -63,14 +64,14 @@ struct CV1MonsterDetailView: View {
                         .padding(.bottom, 30)
                     
                     HStack {
-                        MonsterInfo(title: "HP ❤️", value: monster.location)
-                        MonsterInfo(title: "EXP 📈", value: monster.location)
-                        MonsterInfo(title: "Attack ⚔️", value: monster.location)
+                        MonsterInfo(title: "HP ❤️", value: monster.location!)
+                        MonsterInfo(title: "EXP 📈", value: monster.location!)
+                        MonsterInfo(title: "Attack ⚔️", value: monster.location!)
                     }
                     .padding(.bottom, 20)
                     
                     HStack {
-                        MonsterInfo(title: "Location 📍", value: monster.location)
+                        MonsterInfo(title: "Location 📍", value: monster.location!)
                     }
                 }
                 Spacer()
@@ -91,7 +92,7 @@ struct CV1MonsterDetailView: View {
 
 struct CV1MonsterDetailView_Previews: PreviewProvider {
     
-    @State static var selectedMonster: Monster? = Monster(id: UUID(), name: "Dracula", description: "The main antagonist", image: "https://static.wikia.nocookie.net/castlevania/images/5/51/DracSymph.jpg/revision/latest/scale-to-width-down/1000?cb=20200703143712", location: "Various")
+    @State static var selectedMonster: GameItem? = GameItem(id: UUID(), name: "Dracula", description: "The main antagonist", image: "https://static.wikia.nocookie.net/castlevania/images/5/51/DracSymph.jpg/revision/latest/scale-to-width-down/1000?cb=20200703143712", location: "Various")
     
     static var previews: some View {
         CV1MonsterDetailView(monster: selectedMonster!, selectedMonster: $selectedMonster)

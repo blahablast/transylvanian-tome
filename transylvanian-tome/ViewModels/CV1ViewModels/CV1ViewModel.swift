@@ -9,9 +9,9 @@ import SwiftUI
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-class MonsterListViewModel: ObservableObject {
-    @Published var monsters: [Monster] = []
-    @Published var selectedMonster: Monster? = nil
+class CV1ViewModel: ObservableObject {
+    @Published var monsters: [GameItem] = []
+    @Published var selectedMonster: GameItem? = nil
     @Published var isShowingDetail = false
   
     
@@ -28,7 +28,7 @@ class MonsterListViewModel: ObservableObject {
             }
             
             self.monsters = snapshot?.documents.compactMap { document in
-                try? document.data(as: Monster.self, decoder: Firestore.Decoder())
+                try? document.data(as: GameItem.self, decoder: Firestore.Decoder())
             } ?? []
         }
     }

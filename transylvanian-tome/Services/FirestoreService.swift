@@ -17,12 +17,12 @@ class FirestoreService {
     // MARK: - LOADING MONSTERS TO FIRESTORE
     
     // this function fetches the monsters from a the local json file. Does NOT add them to firestore.
-    func loadMonsters() -> [Monster] {
+    func loadMonsters() -> [GameItem] {
         if let url = Bundle.main.url(forResource: "CV1Monsters", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([Monster].self, from: data)
+                let jsonData = try decoder.decode([GameItem].self, from: data)
                 return jsonData
             } catch {
                 print("Error decoding JSON: \(error)")
@@ -31,13 +31,13 @@ class FirestoreService {
         return []
     }
     
-    func addMonstersToFirestore(monsters: [Monster]) {
+    func addMonstersToFirestore(monsters: [GameItem]) {
         for monster in monsters {
             addMonsterToFirestore(monster: monster)
         }
     }
     
-    func addMonsterToFirestore(monster: Monster) {
+    func addMonsterToFirestore(monster: GameItem) {
         let db = Firestore.firestore()
         
         // Check if a Monster with the same name already exists
@@ -55,7 +55,8 @@ class FirestoreService {
                     "name": monster.name,
                     "description": monster.description,
                     "image": monster.image,
-                    "location": monster.location
+                    "location": monster.location,
+                    "itemUsage": monster.itemUsage
                     // Add other monster properties here
                 ]) { err in
                     if let err = err {

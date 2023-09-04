@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TempAddMonsters: View {
-    @ObservedObject var viewModel = MonsterListViewModel()
+    @ObservedObject var viewModel = CV1ViewModel()
     
     var body: some View {
         Button("Load and Populate Monsters") {

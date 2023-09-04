@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct MonsterListView: View {
-    @ObservedObject var viewModel = MonsterListViewModel()
+    @ObservedObject var viewModel = CV1ViewModel()
     
     var body: some View {
         NavigationStack {
@@ -27,14 +27,13 @@ struct MonsterListView: View {
                                 ForEach(viewModel.monsters) { monster in
                                     MonsterListCell(monster: monster)
                                         .onTapGesture {
-                                            viewModel.selectedMonster = monster // Set the selected monster in the viewModel
+                                            viewModel.selectedMonster = monster
                                         }
                                 }
                             }
                             .task {
                                 viewModel.fetchMonsters()
                             }
-                            // Removed the blur and manual detail view presentation
                         }
                         .padding()
                     }.onAppear(perform: viewModel.fetchMonsters)
